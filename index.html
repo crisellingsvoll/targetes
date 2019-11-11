@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tarjeta_flexbox</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            min-height: 100%;
+        }
+        img{
+            width: 100%;
+        }
+        body{
+            font-family: 'Georgia', cursive;
+            font-size: 18px;
+            background: linear-gradient(38deg,blue,purple);
+            color: mediumpurple;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 2em 4em;
+        }
+        .dissenyador{
+            display: flex;
+            flex-direction: column;
+            width: 25em;
+            margin: 1em;
+            background: rgba(240,240,240,0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 20px white;
+        }
+        .dissenyador_img{
+            border-radius: 15px 15px 0 0;
+            overflow: hidden; /*Tot el que sobreisca, amaga-ho*/
+            width: 100%;
+            height: 300px;
+            background: rebeccapurple;
+        }
+        .dissenyador_img img{
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            filter: grayscale(100%);
+            mix-blend-mode: luminosity;
+        }
+        header{
+            display: flex;
+            margin: 0.5em 1em;
+            padding-bottom: 0.2em;
+            justify-content: space-between;
+            border-bottom: 1.3px solid mediumpurple;
+            align-items: baseline; /*Funciona pel display:felx*/
+        }
+        h3{
+            font-style: normal;
+            font-weight: bold;
+        }
+        span{
+            font-style: italic;
+            font-weight: lighter;
+            font-size: 0.7em;
+            font-family: monospace;
+        }
+        .dissenyador_contingut{
+            flex-grow: 1;
+            text-align: justify;
+            hyphens: auto;
+            margin: 0.6em 1.3em;
+            padding-bottom: 0.2em;
+            padding-top: 0.2em;
+            font-size: 0.9em;
+            line-height: 1.2em;
+        }
+        footer{
+            background: rebeccapurple;
+            color:  beige;
+            font-size: 0.7em;
+            font-size: italic;
+            border-radius: 0 0 15px 15px;
+            padding: 0.7em;
+        }
+        @media (max-width:600px){
+            body{
+                font-size: 16px;
+            }
+            .container{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="dissenyador">
+        <div class="dissenyador_img">
+            <img src="img/debbie_millman_01.jpg" alt="debbie_millman">
+        </div>
+        <header>
+            <h3>Debbie Millman</h3>
+            <span>1962</span>
+        </header>
+        <p class="dissenyador_contingut">
+            Named “one of the most creative people in business” by Fast Company, and “one of the most influential designers working today” by Graphic Design USA, Debbie Millman is also an author, educator, curator and host of the podcast Design Matters.
+            As the founder and host of Design Matters, one of the world’s first and longest running podcasts, Millman has interviewed nearly 500 artists, designers and cultural commentators over the past 14 years. 
+            Design Matters won a 2011 Cooper Hewitt National Design Award, in 2015 Apple designated it one of the best overall podcasts on iTunes, and in 2018 the show was honored by the Webby Awards. In addition, Design Matters has been listed on over 100 “Best Podcasts” lists, including one of the best podcasts in the world by Business Insider. The show is about how some of the world’s most creative people design the arc of their lives, and Debbie has interviewed guests including Tim Ferriss, Malcolm Gladwell, Marina Abramovic, and many, many more.
+        </p>
+        <footer class="dissenyador_peu">
+            Debbie is currently working to eradicate domestic violence and child abuse.
+        </footer>
+    </div>
+    <div>
+        <div class="dissenyador">
+            <div class="dissenyador_img">  
+                <img src="img/alex_trochut_01.jpg" alt="alex_trochut">
+            </div>
+            <header>
+                <h3>Alex Trochut</h3>
+                <span>1981</span>
+            </header>
+            <p class="dissenyador_contingut">
+                For Alex, typography functions on two hierarchical levels. First, there is the image of the word we see; reading comes secondary. As a designer, Alex focuses on the potential of language as a visual medium, pushing language to its limits so that seeing and reading become the same action and text and image become one unified expression.
+                Mixing styles and genres and drawing equally from pop culture, street culture, fashion and music, Alex has created design, illustration and typography for a diverse range of clients: Nike, Adidas, The Rolling Stones, Katy Perry, BBC, Coca-Cola, Pepsi, The Guardian, The New York Times, Time Magazine and many others. Alex’s work has been internationally recognized, appearing in in exhibitions and publications worldwide. He has given talks and been honored by the Art Directors Club––including being named a 2008 Young Gun––the Type Directors Club, Creative Review, Cannes, Clio and D&AD among others. His monograph, More Is More, explores his working methodologies and influences and was published in 2011.
+            </p>
+            <footer class="dissenyador_peu">
+                Alex currently lives and works in Brooklyn.
+            </footer>
+         </div>
+    </div>
+    </div>
+</body>
+</html>
